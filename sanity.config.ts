@@ -1,18 +1,18 @@
-import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './schemaTypes'
+import {defineConfig} from 'sanity'
+import {structureTool} from 'sanity/structure'
+import {visionTool} from '@sanity/vision'
+import {schemaTypes} from './schema'
 
 export default defineConfig({
-    name: 'default',
-    title: 'ORD Public',
+  name: 'default',
+  title: 'ORD Public',
 
-    projectId: 'vh55mhjn',
-    dataset: 'production',
+  projectId: 'vh55mhjn',
+  dataset: 'production',
 
-    plugins: [ structureTool(), visionTool() ],
+  plugins: [structureTool(), visionTool()],
 
-    schema: {
-        types: schemaTypes,
-    },
+  schema: {
+    types: schemaTypes,
+  },
 })
